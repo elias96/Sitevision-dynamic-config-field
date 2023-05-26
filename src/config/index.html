@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= i18n('settings') %></h3>
+  </div>
+
+  <div class="panel-body">
+    <% _.each(fields, function(field, index) { %>
+      <% index = index + 1 %>
+      <div class="form-group">
+        <label>Component - <%- index %></label>
+        <input type="hidden" data-component="page-list" name="pages-<%- index %>" id="pages-<%- index %>" />
+      </div>
+    <% }) %>
+    <div class="form-group">
+      <button id="addComponentButton">Add a new field</button>
+    </div>
+  </div>
+</div>
